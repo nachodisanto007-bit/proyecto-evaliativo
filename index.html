@@ -1,0 +1,38 @@
+<!-- Dashboard de Métricas -->
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"><title>Sport-Tech | Dashboard</title></head>
+<body>
+    <nav class="sidebar">
+        <a href="index.html" class="logo">⚡ SPORT-TECH</a>
+        <div class="nav-menu" id="menu-placeholder">
+            <!-- El menú se repite en cada página por consistencia -->
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="inventario.html" class="nav-link">Control de Stock</a>
+            <a href="galeria.html" class="nav-link">Explorar Catálogo</a>
+            <a href="reservas.html" class="nav-link">Reservas</a>
+            <a href="calendario.html" class="nav-link">Calendario</a>
+            <a href="historial.html" class="nav-link">Logística</a>
+            <a href="detalle.html" class="nav-link">Ficha Técnica</a>
+            <a href="configuracion.html" class="nav-link">Configuración</a>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>Métricas de Rendimiento</h1>
+        <div class="grid-stats">
+            <div class="card"><h3>Ventas Hoy</h3><p style="font-size: 2rem; color: var(--secondary-cyan);">$4,250</p></div>
+            <div class="card"><h3>Artículos Vendidos</h3><p style="font-size: 2rem;">128</p></div>
+            <div class="card"><h3>Eventos Próximos</h3><p style="font-size: 2rem;">3</p></div>
+        </div>
+        <div class="card">
+            <h3>Gráfico de Actividad (CSS Simulado)</h3>
+            <div style="display: flex; align-items: flex-end; gap: 10px; height: 200px; padding-top: 20px;">
+                <div style="height: 40%; width: 100%; background: var(--primary-neon);"></div>
+                <div style="height: 70%; width: 100%; background: var(--secondary-cyan);"></div>
+                <div style="height: 100%; width: 100%; background: var(--primary-neon);"></div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
