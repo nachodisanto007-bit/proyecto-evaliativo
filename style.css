@@ -1,1 +1,83 @@
-jdfjsdfjkjdfs
+/* 
+   SISTEMA SPORT-TECH - ESTILOS CENTRALIZADOS
+   Arquitectura: Variables CSS para mantenimiento ágil.
+   Estética: High-Performance Dark Mode.
+*/
+
+:root {
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --primary: #fb923c; /* Naranja Neón */
+    --secondary: #38bdf8; /* Azul Atlético */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --sidebar-width: 250px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR PERSISTENTE --- */
+.sidebar {
+    width: var(--sidebar-width);
+    background: #020617;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid var(--border);
+}
+
+.brand { font-weight: 800; font-size: 1.5rem; color: var(--primary); margin-bottom: 2rem; }
+.nav-menu { list-style: none; }
+.nav-item { margin-bottom: 0.5rem; }
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.nav-link:hover, .nav-link.active { background: var(--bg-card); color: var(--primary); }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 2.5rem;
+}
+
+.header-page { margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
+
+/* --- COMPONENTES --- */
+.card { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); }
+.btn-primary { 
+    background: var(--primary); border: none; padding: 10px 20px; 
+    border-radius: 6px; color: white; font-weight: 700; cursor: pointer;
+}
+.grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.stat-val { font-size: 2rem; font-weight: 800; display: block; margin-top: 10px; }
+
+.data-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.data-table th { text-align: left; padding: 1rem; border-bottom: 2px solid var(--border); color: var(--text-muted); }
+.data-table td { padding: 1rem; border-bottom: 1px solid var(--border); }
+
+.pill { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+.pill-success { background: #166534; color: #4ade80; }
+.pill-warning { background: #854d0e; color: #facc15; }
+
+/* --- FORMULARIOS --- */
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-muted); }
+.input-field { 
+    width: 100%; background: #0f172a; border: 1px solid var(--border); 
+    padding: 12px; border-radius: 8px; color: white; 
+}
